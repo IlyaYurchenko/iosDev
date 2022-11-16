@@ -1,38 +1,7 @@
 import Foundation
-//
-//func makeItCool(_ string: String) -> String {
-//    let newCoolString = string.lowercased()
-//    .replacingOccurrences(of: "a", with: "@")
-//    .replacingOccurrences(of: "i", with: "1")
-//    .replacingOccurrences(of: "s", with: "$")
-//    .replacingOccurrences(of: "o", with: "0")
-//    .replacingOccurrences(of: "t", with: "+")
-//    return newCoolString
-//}
-//
-//print(makeItCool("Swift is awesame"))
-
-
-//func makeItCool(_ string: String) -> String {
-//    let newCoolString: String
-//    let replaces = [
-//         "@" : ["A", "a"],
-//         "0" : ["O", "o"],
-//         "+" : ["T", "t"],
-//         "1" : ["I", "i"],
-//         "$" : ["S", "s"],
-//        ]
-//
-//    for value in replaces.values {
-//        newCoolString = string.replacingOccurrences(of: value, with: key)
-//    }
-//
-//
-//    return newCoolString
-//}
 
 func makeItCool(_ string: String) -> String {
-    var newCoolString = ""
+    var newCoolString = string
     let replaces = [
         "a" : "@",
         "o" : "0",
@@ -40,10 +9,26 @@ func makeItCool(_ string: String) -> String {
         "i" : "1",
         "s" : "$",
     ]
-    
+
     for (key, value) in replaces {
-        newCoolString = string.lowercased().replacingOccurrences(of: key, with: value, options: .literal, range: nil)
+        newCoolString = string.lowercased().replacingOccurrences(of: key, with: value)
     }
     return newCoolString
 }
 print(makeItCool("Swift is Awesame"))
+
+
+//
+//var string = "Swift is Awesaome"
+//let replaces = [
+//     "a" : "@",
+//     "o" : "0",
+//     "t" : "+",
+//     "i" : "1",
+//     "s" : "$",
+//    ]
+//
+//for (key, value) in replaces {
+//    string = string.lowercased().replacingOccurrences(of: key, with: value)
+//}
+//print(string)
