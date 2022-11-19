@@ -8,13 +8,19 @@ func makeItCool(_ string:  String) -> String {
         "t" : "+",
         "i" : "1",
         "s" : "$",
+        "A" : "@",
+        "O" : "0",
+        "T" : "+",
+        "I" : "1",
+        "S" : "$",
     ]
 
     for (key, value) in replaces {
-        newCoolString = newCoolString.lowercased().replacingOccurrences(of: key, with: value)
-    }
+        newCoolString = newCoolString.replacingOccurrences(of: key, with: value)
+            }
+               
     return newCoolString
 }
-print(makeItCool("Swift is Awesame"))
+print(makeItCool("Hey I wanna to becoma a iOS develOper"))
 
 
